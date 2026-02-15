@@ -1,0 +1,24 @@
+[project]
+name = "crewai_flow_x_linkedin_repost"
+version = "0.1.0"
+description = "crewai_flow_x_linkedin_repost using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.9.3",
+    "tweepy>=4.14.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+kickoff = "crewai_flow_x_linkedin_repost.main:kickoff"
+run_crew = "crewai_flow_x_linkedin_repost.main:kickoff"
+plot = "crewai_flow_x_linkedin_repost.main:plot"
+run_with_trigger = "crewai_flow_x_linkedin_repost.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"
